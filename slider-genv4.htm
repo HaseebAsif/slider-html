@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+
+    <style>
+      ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .boxx {
+        background-color: #f5f5f5;
+        text-align: center;
+        padding: 3.67rem 0;
+      }
+
+      @media screen and (min-width: 900px) {
+        .boxx {
+          padding: 2.65rem 0;
+        }
+        .section-box-1 {
+          margin-right: 20px;
+        }
+      }
+
+      .boxx__slider-desktop {
+        display: block; /* Display on desktop */
+        height: fit-content;
+      }
+
+      .boxx__slider-mobile {
+        display: none; /* Hide on desktop */
+      }
+
+      @media screen and (max-width: 900px) {
+        .boxx__slider-desktop {
+          display: none; /* Hide on mobile */
+        }
+
+        .boxx__slider-mobile {
+          display: block; /* Display on mobile */
+        }
+      }
+
+      .boxx__slider .slick-dots {
+        display: -webkit-box !important;
+        display: -ms-flexbox !important;
+        display: flex !important;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+      }
+
+      .boxx__slider .slick-dots li {
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        background-color: #898989;
+        cursor: pointer;
+        -webkit-transition: all 0.25s;
+        -o-transition: all 0.25s;
+        transition: all 0.25s;
+      }
+
+      .boxx__slider .slick-dots li + li {
+        margin-left: 1.5rem;
+      }
+
+      @media screen and (min-width: 900px) {
+        .boxx__slider .slick-dots li + li {
+          margin-left: 1.125rem;
+        }
+      }
+
+      .boxx__slider .slick-dots li.slick-active {
+        background-color: #00629a;
+      }
+
+      .boxx__item {
+        padding-bottom: 3.75rem;
+      }
+
+      @media screen and (min-width: 900px) {
+        .boxx__item {
+          padding-bottom: 1.8125rem;
+        }
+      }
+
+      .boxx__item-stars {
+        margin: 0 auto;
+      }
+
+      .boxx__item:focus {
+        outline: none;
+      }
+
+      .u-color-white {
+        color: #ffffff;
+      }
+
+      .u-margin-bottom-med {
+        margin-bottom: 3.333rem;
+      }
+
+      @media screen and (min-width: 900px) {
+        .u-margin-bottom-med {
+          margin-bottom: 0rem;
+        }
+      }
+
+      .u-color-gray-drk-2 {
+        color: #323232;
+      }
+
+      .container-product img {
+        width: auto;
+        height: 90px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+      }
+
+      @media screen and (min-width: 900px) {
+        .container-product {
+          width: 26.6%;
+        }
+      }
+
+      @media screen and (min-width: 1200px) {
+        .container-product img {
+          height: 135px;
+        }
+      }
+
+      .container-product a {
+        padding: 15px 28px;
+        background-color: #007bc0;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+
+      .container-product a:hover {
+        background-color: #00629a;
+      }
+
+      .slider___pice-tag {
+        margin-bottom: 45px;
+      }
+
+      .slider___product-title {
+        min-height: 70px;
+      }
+
+      .easy_section_slider {
+        display: flex;
+        flex-wrap: wrap; /* Ensure flex items wrap to the next line if there's not enough space */
+      }
+
+      .container-product {
+        background-color: white;
+        padding: 50px 25px 65px 25px;
+        margin: 15px;
+        flex-grow: 1; /* Allow flex items to grow to fill available space */
+      }
+
+      @media screen and (min-width: 900px) {
+        .easy_section_slider {
+          justify-content: space-between; /* Distribute flex items evenly along the main axis */
+        }
+      }
+
+      @media screen and (min-width: 1200px) {
+        .container-product {
+          width: calc(
+            33.333% - 30px
+          ); /* Calculate width for 3 items per row with margin */
+        }
+      }
+
+      .section-box-1 {
+        width: 380px;
+      }
+
+      @media screen and (max-width: 1200px) {
+        .section-box-1 {
+          width: 0px;
+        }
+      }
+
+      .section-box-1 img {
+        width: auto;
+        height: 100% !important;
+      }
+
+      .section-box-2 {
+        width: 50%;
+        flex-grow: 1;
+      }
+
+      @media screen and (max-width: 900px) {
+        .u-title-neff {
+          font-size: 25px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="easy_section_slider">
+      <div class="section-box-2">
+        <div class="boxx">
+          <div class="u-margin-bottom-med">
+            <h3 class="u-title-neff">Bosch Fridge Freezers</h3>
+          </div>
+          <!-- Desktop Slider -->
+          <div
+            class="boxx__slider boxx__slider-desktop"
+            id="slider-desktop-0001"
+          >
+            <!-- Desktop slider content will be generated dynamically -->
+          </div>
+          <!-- Mobile Slider -->
+          <div class="boxx__slider boxx__slider-mobile" id="slider-mobile-0001">
+            <!-- Mobile slider content will be generated dynamically -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+  ></script>
+  <script>
+    $(document).ready(function () {
+      // Log the selectors to check if they are correctly targeting the elements
+      console.log($("#slider-desktop-0001"));
+      console.log($("#slider-mobile-0001"));
+
+      // Initialize the Slick carousel for desktop
+      var desktopSlider = $("#slider-desktop-0001");
+      if (desktopSlider.length) {
+        // Check if the desktop slider exists
+        desktopSlider.slick({
+          slidesToShow: 3, // Display 3 products per slide on desktop
+          slidesToScroll: 3, // Slide by 3 boxes at a time on desktop
+          arrows: false,
+          dots: true,
+          customPaging: function customPaging() {},
+          autoplay: true,
+          autoplaySpeed: 23500,
+        });
+      }
+
+      // Initialize the Slick carousel for mobile
+      var mobileSlider = $("#slider-mobile-0001");
+      if (mobileSlider.length) {
+        // Check if the mobile slider exists
+        mobileSlider.slick({
+          slidesToShow: 1, // Display 1 product per slide on mobile
+          slidesToScroll: 1,
+          arrows: false,
+          dots: true,
+          customPaging: function customPaging() {},
+          autoplay: true,
+          autoplaySpeed: 2000,
+        });
+      }
+
+      const currentDate = new Date().toISOString().replace(/[^0-9]/g, ""); // Get current date without special characters
+
+      fetch(
+        `https://manta.link/548979198137657416814548786940165441/288643030/products-bosch-ff.json?=v${currentDate}`
+      )
+        .then((response) => response.json())
+        .then((products) => {
+          // Get the first 12 products for desktop view and first 8 products for mobile view
+          const desktopProducts = products.slice(0, 12);
+          const mobileProducts = products.slice(0, 8);
+
+          // Loop through desktop products to generate HTML for each product
+          desktopProducts.forEach((product, index) => {
+            // Generate HTML for the product
+            const productHTML = `
+                <div class="container-product">
+                    <img src="${product["Image Src"]}" alt="${product.Title}" draggable="false">
+                    <p class="slider___product-title">${product.Title}</p>
+                    <p class="slider___pice-tag">€${product["Variant Price"]}</p>
+                    <a class="product-button" href="${product.URL}" target="_blank">Shop now</a>
+                </div>
+        `;
+
+            // Append product HTML to desktop slider if it exists
+            if (desktopSlider.length) {
+              desktopSlider.slick("slickAdd", productHTML);
+            }
+          });
+
+          // Loop through mobile products to generate HTML for each product
+          mobileProducts.forEach((product, index) => {
+            // Generate HTML for the product
+            const productHTML = `
+                <div class="container-product">
+                    <img src="${product["Image Src"]}" alt="${product.Title}" draggable="false">
+                    <p class="slider___product-title">${product.Title}</p>
+                    <p class="slider___pice-tag">€${product["Variant Price"]}</p>
+                    <a class="product-button" href="${product.URL}" target="_blank">SHOP NOW</a>
+                </div>
+        `;
+
+            // Append product HTML to mobile slider if it exists
+            if (mobileSlider.length) {
+              mobileSlider.slick("slickAdd", productHTML);
+            }
+          });
+        })
+        .catch((error) => console.error("Error fetching products:", error));
+    });
+  </script>
+</html>
